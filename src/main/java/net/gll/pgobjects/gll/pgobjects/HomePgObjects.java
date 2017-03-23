@@ -11,9 +11,9 @@ public class HomePgObjects extends PageObject {
 	WebElement loginreg; 
 	@FindBy(xpath=".//*[@id='mainNavi']/ul/li[1]/a")
 	WebElement products; 
-	@FindBy(xpath=".//*[@id='mainNavi']/ul/li[1]/div/div/div[2]/ul/li[1]/ul/li[1]/a")
+	@FindBy(xpath=".//*[@id='mainNavi']/ul/li[1]/div/div/div[2]/ul/li/ul/li[1]/a")
 	WebElement homepure; 
-	@FindBy(xpath=".//*[@id='header']/div/div[4]/a[2]")
+	@FindBy(xpath=".//*[@id='header']/div[1]/div[4]/div[2]/a")
 	WebElement virtualoffice; 
 	
        public void clickLogInReg(){
@@ -26,7 +26,7 @@ public class HomePgObjects extends PageObject {
        public void clickProductsTab(){
     	   products.click();
        }
-       public void clickHomePure(){
+       public void clickSITEQLIK(){
     	   homepure.click();
        }
        
