@@ -15,6 +15,10 @@ public class HomePgObjects extends PageObject {
 	WebElement homepure; 
 	@FindBy(xpath=".//*[@id='header']/div[1]/div[4]/div[2]/a")
 	WebElement virtualoffice; 
+	@FindBy(xpath=".//*[@id='header']/div[1]/div[2]/div[1]/div/div/div[2]/div/a/span")
+	WebElement removeitems; 
+	@FindBy(xpath=".//*[@id='header']/div[1]/div[2]/div[1]/div/a/span[2]")
+	WebElement itemvalue; 
 	
        public void clickLogInReg(){
     	   
@@ -29,5 +33,15 @@ public class HomePgObjects extends PageObject {
        public void clickSITEQLIK(){
     	   homepure.click();
        }
-       
+       public void removeItems(){
+    	   removeitems.click();
+       }
+       public int getItemValue(){
+    	   try{
+    	  return Integer.parseInt(itemvalue.getText());
+    	   }catch(org.openqa.selenium.ElementNotVisibleException ex){
+    		   return 0;
+    	   }
+    	  
+       }
 }
